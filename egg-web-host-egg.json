@@ -4,10 +4,10 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2024-10-31T16:49:02+00:00",
+    "exported_at": "2024-10-31T17:05:19+00:00",
     "name": "Nginx Proxy Egg",
     "author": "max@mjdawson.net",
-    "description": "An egg to host any Website.\r\nit also has composer, just specify your packages in the packages box, and it will install the packages when you start the server, it also has wordpress, just turn on the slider when you make the server, and wordpress will get installed for you",
+    "description": "An egg to host any Website.\r\nIt also has composer, just specify your packages in the packages box, and it will install the packages when you start the server, it also has wordpress, just turn on the slider when you make the server, and wordpress will get installed for you",
     "features": null,
     "docker_images": {
         "PHP 8.0": " ghcr.io\/sigma-production\/nginx-ptero:8.0",
@@ -37,6 +37,16 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "present",
+            "field_type": "text"
+        },
+        {
+            "name": "Domain",
+            "description": "The domain your website runs on.\r\nA reverse proxy must already be configured pointing here.",
+            "env_variable": "domain_name",
+            "default_value": "example.com",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:200",
             "field_type": "text"
         },
         {
