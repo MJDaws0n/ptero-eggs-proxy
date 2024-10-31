@@ -12,7 +12,7 @@ Set you varaibles bellow
 */
     
 $HTTPS = true; // Set to 'true' or 'false'
-$DOMAIN = ''; // Set to your domain name. Do NOT include https or the port
+$DOMAIN = 'example.com'; // Set to your domain name. Do NOT include https or the port
 
 /*
 Stop editing variables here
