@@ -7,6 +7,9 @@ else
     # Update the 15th line of ./proxymanage.php with the provided domain
     sed -i "15s/.*/\$DOMAIN = '$1';/" ./proxymanage.php
 
+    echo "⟳ Updateding composer modules"
+    composer install --working-dir=/home/container/webroot
+
     echo "⟳ Starting PHP-FPM..."
     /usr/sbin/php-fpm8 --fpm-config /home/container/php-fpm/php-fpm.conf --daemonize
 
